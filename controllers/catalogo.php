@@ -68,6 +68,5 @@
 		$c->totalPaginas=$totalPaginas;
 	} 	
 	$c->render();
-	/*ToDo:
-	*/
+
 ?>
