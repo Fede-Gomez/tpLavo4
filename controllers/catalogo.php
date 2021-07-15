@@ -5,6 +5,7 @@
 	require '../models/Juegos.php';
 	require '../models/Generos.php';
 	require '../views/Catalogo.php';
+	require '../aprobarFinal.php';
 
 	if(!isset($_GET['filtro'])||!isset($_GET['orden'])||!isset($_GET['pag']))
 		header("Location: catalogo?filtro=fechaLanzamiento&orden=desc&pag=1");
