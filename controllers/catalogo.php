@@ -1,5 +1,4 @@
 <?php
-//hola gabi 6:05
 	require '../fw/fw.php';
 	require '../static/JS/Funciones.js';
 	include '../static/CSS/catalogo.css';
