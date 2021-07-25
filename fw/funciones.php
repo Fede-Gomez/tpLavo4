@@ -31,6 +31,16 @@
 		return $string;
 	}
 
+	function checkPrevUrl($prevUrl){
+        $path=substr($prevUrl,0,10);
+
+        if($path=="/play2win/"){
+            return $prevUrl;
+        }else{
+            return "/play2win/inicio";
+        }
+    }
+
 	/*
 	function totalPaginas($totalElem, $maxElemRender, $pag){
 		if($totalElem){

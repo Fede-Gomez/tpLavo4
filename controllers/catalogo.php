@@ -47,7 +47,7 @@
 		if($_GET['pag']<1)throw new ValidacionException('El numero de pagina es menor que el admitido.');
 		if(!ctype_digit($_GET['pag']))throw new ValidacionException('El numero de pagina contiene caracteres invalidos.');
 		$totalPaginas=ceil($totalElem/$maxElemRender);
-		if($_GET['pag']>$totalPaginas) header("Location: ". $q->createQuery2('pag','1'));
+		if($_GET['pag']>$totalPaginas) header("Location: ". checkPrevUrl($q->createQuery2('pag','1')));
 		/*if($_GET['pag']>$totalPaginas)throw new ValidacionException('El numero de pagina es mayor que el admitido.');*/
 		if(isset($_GET['buscar'])){
 			$c->productos=$j->getJuegosByGenero2($id_generos,

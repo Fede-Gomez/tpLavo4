@@ -27,7 +27,7 @@
 					$usu->removeFromWishlist($_SESSION['usuId'], $_GET['id_expansion'], 'expansion');
 			}
 			if(isset($_GET['prevUrl'])){
-				header("Location: ".$_GET['prevUrl']);
+				header("Location: ".checkPrevUrl($_GET['prevUrl']));
 			}
 				else
 					//Reemplazar por controlador inicio cuando este creado.

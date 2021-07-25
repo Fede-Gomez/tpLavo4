@@ -17,7 +17,7 @@
                 $_SESSION['usuNom'] = $datosUsu['nombre'];
                 $_SESSION['usuTipo'] = $datosUsu['tipo_usuario'];
                 if(isset($_POST['prevUrl'])){
-                    header("Location: ".$_POST['prevUrl']);
+                    header("Location: ".checkPrevUrl($_POST['prevUrl']));
                     exit;
                 }else{
                     //Reemplazar por controlador inicio cuando este creado.

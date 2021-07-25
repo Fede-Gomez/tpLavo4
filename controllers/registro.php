@@ -12,7 +12,7 @@
         if($_POST['reg_pass'] == $_POST["confirmarPass"]){
             $usu->crearUsuario($_POST["reg_nombre"],$_POST["reg_email"],$_POST["reg_pass"]);
             if(isset($_POST['prevUrl']))
-                header("Location: ".$_POST['prevUrl']);
+                header("Location: ".checkPrevUrl($_POST['prevUrl']));
             else
                 //Reemplazar por controlador inicio cuando este creado.
                 header("Location: inicio");
